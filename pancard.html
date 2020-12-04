@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> PAN CARD details</title>
+<meta charset="UTF-8">
+</head>
+
+
+<body>
+<header ALIGN=CENTER>
+    <section id='header' style='text-align: center;'>
+        <B>Request For New PAN Card Or/And Changes Or Correction in PAN Data</B><br/><I>Fields marked with * (asterisk) are mandatory. . To avoid mistake(s), please refer <a href='https://tin.tin.nsdl.com/pan/GuidelinesCorr.html' target='_blank'>guidelines</a> and <a href='https://tin.tin.nsdl.com/pan/InstructionsCorr.html' target='_blank'>instructions</a> .</I>
+    </section>
+</header>
+
+
+<FORM METHOD=POST ACTION="PanCorrection" NAME="new_PanCorrect">
+<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+    <TR >
+       
+
+        <TR>
+            <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+            <TD  WIDTH=98%><B>* Whether citizen of India</B>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Yes <INPUT TYPE=radio NAME=PAN_CTZN_FLG id="PAN_CTZN    _YES" VALUE="YES"  >
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            No <INPUT TYPE=radio NAME=PAN_CTZN_FLG VALUE="NO" id="PAN_CTZN_NO"    >
+            </TD>
+            </TR>
+
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD  WIDTH=98%><B>* Permanent Account Number (PAN)</B>
+                   <INPUT TYPE=text NAME=PAN_NUMBER VALUE="" SIZE=20 MAXLENGTH=10>
+                </TD>
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>
+              <INPUT TYPE=checkbox NAME=PAN_NAME_CK VALUE="YES" >
+            </TD>
+            <TD >
+              <B>* 1. Name</B> <span style="color:blue"> </span>
+            </TD>
+          </TR>
+
+          <TR>
+            <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+            <TD><B> Title</B>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                Shri/Mr
+                <INPUT TYPE=radio NAME=PAN_TITLE VALUE="1" >
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                Smt./Mrs.
+                <INPUT TYPE=radio NAME=PAN_TITLE VALUE="2" >
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                Kumari/Ms
+                <INPUT TYPE=radio NAME=PAN_TITLE VALUE="3" >
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                M/s
+             </TD>
+          </TR>
+
+          <TR>
+            <TD COLSPAN=2>&nbsp;</TD>
+            <TD>
+              <TABLE WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+              <TR>
+                 <TD>&nbsp;<B>Last Name/Surname</B><BR><INPUT TYPE=text NAME=PAN_LST_NM VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+                 <TD><B>First Name</B><BR><INPUT TYPE=text NAME=PAN_FST_NM VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+                 <TD><B>Middle Name</B><BR><INPUT TYPE=text NAME=PAN_MID_NM VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+              </TR>
+              </TABLE>
+            </TD>
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>&nbsp;</TD> 
+           <TD><B>*</B><B> Name as you would like it printed on the card</B> <span style="color:blue">(Prefix like Shri, Smt, Kumari, Late,
+            Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</span></TD> 
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>&nbsp;</TD>
+            <TD>&nbsp;
+               <INPUT TYPE=text NAME=PAN_CRD_MN_NM VALUE="" SIZE=40 MAXLENGTH=40>
+            </TD>
+          </TR>
+          <TR>
+            <TD COLSPAN=2>&nbsp;</TD> 
+           <TD><B>*</B><B>Details of Parents.</B> <span style="color:blue">(Prefix like Shri, Smt, Kumari, Late,
+            Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</span></TD> 
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2 >&nbsp;</TD> 
+            <TD>
+             <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                    <TD>     
+        <B>Whether mother is single parent and you wish to apply for PAN by furnishing the name of your mother only </B> </TD>
+
+            <TD>  
+              Yes
+                <INPUT TYPE=radio  NAME=PAN_MTHR_NM_TO_PRINT_FLG VALUE="S"   >
+               No <INPUT TYPE=radio NAME=PAN_MTHR_NM_TO_PRINT_FLG VALUE=""  checked _ >
+                    </TD>
+
+            </TABLE>
+           </TD>
+           </TR>
+           
+           <TR>
+            <TD COLSPAN=2>
+                <INPUT TYPE=checkbox NAME=PAN_NAME_CKF VALUE="YES_F" ></TD>
+           <TD><B>*</B><B>2. Father's Name</B> <span style="color:blue">(Mandatory field. Even married women should give father's name only.)</span></TD> 
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>&nbsp;</TD>
+            <TD>
+              <TABLE WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+              <TR>
+                 <TD>&nbsp;<B>Last Name/Surname</B><BR><INPUT TYPE=text NAME=PAN_LST_NMF VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+                 <TD><B>First Name</B><BR><INPUT TYPE=text NAME=PAN_FST_NMF VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+                 <TD><B>Middle Name</B><BR><INPUT TYPE=text NAME=PAN_MID_NMF VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+              </TR>
+              </TABLE>
+            </TD>
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>
+                <INPUT TYPE=checkbox NAME=PAN_NAME_CKM VALUE="YES_M" ></TD>
+           <TD> <span style="color:blue">3. Mother's Name (This field is optional.)</span></TD> 
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>&nbsp;</TD>
+            <TD>
+              <TABLE WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+              <TR>
+                 <TD>&nbsp;<B>Last Name/Surname</B><BR><INPUT TYPE=text NAME=PAN_LST_NMM VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+                 <TD><B>First Name</B><BR><INPUT TYPE=text NAME=PAN_FST_NMM VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+                 <TD><B>Middle Name</B><BR><INPUT TYPE=text NAME=PAN_MID_NMM VALUE="" SIZE=15 MAXLENGTH=25 ></TD>
+              </TR>
+              </TABLE>
+            </TD>
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2 >&nbsp;</TD> 
+            <TD>
+             <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                    <TD WIDTH=50%>     
+        *<B>4. Select Parent name which is to be printed on the card</B>
+           <I> (In case no option is provided then PAN card will be issued with father's name)</I> </TD>
+
+            <TD>  
+                Father Name 
+                <INPUT TYPE=radio  NAME=PAN_MTHR_NM_TO_PRINT_FLG VALUE="FS" checked _  >
+                    Mother Name <INPUT TYPE=radio NAME=PAN_MTHR_NM_TO_PRINT_FLG VALUE=""  >
+                    </TD>
+
+            </TABLE>
+           </TD>
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>
+                <INPUT TYPE=checkbox NAME=DOB_CKP VALUE="YES_P" ></TD>
+                    <TD>
+                        <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                               <TD WIDTH=50%>     
+                   *<B>5. Date of Birth/Incorporation/Agreement/Partnership
+                    or Trust Deed/Formation of Body of Individuals/
+                    Association of Personsd</B></TD>
+           
+                        
+                          <TD>
+                            <TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+                        <TD VALIGN=TOP><FONT SIZE=-1>DD<BR>
+                            <SELECT NAME=PAN_DT_BRTH_DD>
+                              <OPTION VALUE="" > DD</OPTION>
+                              <OPTION VALUE="01" > 1</OPTION>
+                              <OPTION VALUE="02" > 2</OPTION>
+                              <OPTION VALUE="03" > 3</OPTION>
+                              <OPTION VALUE="04" > 4</OPTION>
+                              <OPTION VALUE="05" > 5</OPTION>
+                              <OPTION VALUE="06" > 6</OPTION>
+                              <OPTION VALUE="07" > 7</OPTION>
+                              <OPTION VALUE="08" > 8</OPTION>
+                              <OPTION VALUE="09" > 9</OPTION>
+                              <OPTION VALUE="10" > 10</OPTION>
+                              <OPTION VALUE="11" > 11</OPTION>
+                              <OPTION VALUE="12" > 12</OPTION>
+                              <OPTION VALUE="13" > 13</OPTION>
+                              <OPTION VALUE="14" > 14</OPTION>
+                              <OPTION VALUE="15" > 15</OPTION>
+                              <OPTION VALUE="16" > 16</OPTION>
+                              <OPTION VALUE="17" > 17</OPTION>
+                              <OPTION VALUE="18" > 18</OPTION>
+                              <OPTION VALUE="19" > 19</OPTION>
+                              <OPTION VALUE="20" > 20</OPTION>
+                              <OPTION VALUE="21" > 21</OPTION>
+                              <OPTION VALUE="22" > 22</OPTION>
+                              <OPTION VALUE="23" > 23</OPTION>
+                              <OPTION VALUE="24" > 24</OPTION>
+                              <OPTION VALUE="25" > 25</OPTION>
+                              <OPTION VALUE="26" > 26</OPTION>
+                              <OPTION VALUE="27" > 27</OPTION>
+                              <OPTION VALUE="28" > 28</OPTION>
+                              <OPTION VALUE="29" > 29</OPTION>
+                              <OPTION VALUE="30" > 30</OPTION>
+                              <OPTION VALUE="31" > 31</OPTION>
+                            </SELECT></FONT>
+
+                            
+                        </TD>
+                        <TD VALIGN=TOP><FONT SIZE=-1>MM<BR>
+                            <SELECT NAME=PAN_DT_BRTH_MM>
+                              <OPTION VALUE="" > MM</OPTION>
+                              <OPTION VALUE="01" > JAN</OPTION>
+                              <OPTION VALUE="02" > FEB</OPTION>
+                              <OPTION VALUE="03" > MAR</OPTION>
+                              <OPTION VALUE="04" > APR</OPTION>
+                              <OPTION VALUE="05" > MAY</OPTION>
+                              <OPTION VALUE="06" > JUN</OPTION>
+                              <OPTION VALUE="07" > JUL</OPTION>
+                              <OPTION VALUE="08" > AUG</OPTION>
+                              <OPTION VALUE="09" > SEP</OPTION>
+                              <OPTION VALUE="10" > OCT</OPTION>
+                              <OPTION VALUE="11" > NOV</OPTION>
+                              <OPTION VALUE="12" > DEC</OPTION>
+                            </SELECT>
+                       </TD>
+                       <TD VALIGN=TOP><FONT SIZE=-1>YYYY<BR>
+                        <INPUT TYPE=text NAME=PAN_DT_BRTH_YYYY VALUE="" SIZE=4 MAXLENGTH=4>
+                   </TD>
+                            </TABLE>
+                    </TD>
+           
+                       </TABLE>
+                    </TD>
+           </TR>
+
+           <TR>
+            <TD COLSPAN=2>
+                <INPUT TYPE=checkbox NAME=GEND_CKP VALUE="YES_G" ></TD>
+                    <TD>
+                        <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                               <TD WIDTH=50%> *<B>6. Gender</B></TD>
+                               <TD>
+                                Male <INPUT TYPE=radio NAME=PAN_GEN VALUE="M" >
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    Female <INPUT TYPE=radio NAME=PAN_GEN VALUE="F" >
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    TransGender <INPUT TYPE=radio NAME=PAN_GEN VALUE="T" >
+                               </TD>
+                        </TABLE>
+                    </TD>
+                        </TR>
+
+                        <TR>
+                        <TD COLSPAN=2>
+                            <INPUT TYPE=checkbox NAME=P_M_CKP VALUE="YES_PH" ></TD>
+                                    <TD>     
+                                        <B>7. Photo Mismatch</B></TD>
+                        </TR>
+
+                        <TR>
+                            <TD COLSPAN=2>
+                                <INPUT TYPE=checkbox NAME=SIG_M_CKP VALUE="YES_SIG" ></TD>
+                                        <TD>     
+                                            <B>8. Signature Mismatch</B></TD>
+                            </TR>
+                        
+                            <TR>
+                                <TD COLSPAN=2>
+                                    <INPUT TYPE=checkbox NAME=ADD_CKP VALUE="YES_G" ></TD>
+                                        <TD>
+                                            <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                                   <TD WIDTH=50%> *<B>9. Address for Communication</B></TD>
+                                                   <TD>
+                                                    Residential <INPUT TYPE=radio NAME=PAN_ADD VALUE="R" >
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        Office <INPUT TYPE=radio NAME=PAN_ADD VALUE="O" >
+                                                   </TD>
+                                            </TABLE>
+                                              <TD>
+                                            </TR>
+
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                      <TD WIDTH=50%> <B>Office Name</B><I> (to be filled only in case of office address)</I></TD>
+                                      <TD><INPUT TYPE=text NAME=PAN_OFF_ADD VALUE=""  SIZE=30 MAXLENGTH=64></TD>
+                                        </TABLE>
+                                    <TD>
+                            </TR>
+
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B> 	Flat/Door/Block No.</B> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_OFF_H_NO VALUE=""  SIZE=30 MAXLENGTH=64></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>Flat/Door/Block No.</B> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_OFF_H_NO VALUE=""  SIZE=30 MAXLENGTH=64></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>Name of Premises/Building/Village</B> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_OFF_ADD_P VALUE=""  SIZE=30 MAXLENGTH=64></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>Area/Locality/Taluka/Sub-Division</B> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_OFF_ADD_L VALUE=""  SIZE=30 MAXLENGTH=64></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>	Town/City/District</B> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_OFF_ADD_D VALUE=""  SIZE=30 MAXLENGTH=64></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>State/Union Territory</B> </TD>
+                                     <TD>
+                                        <SELECT NAME=PAN_RO1_STATE >
+                                            <OPTION VALUE="" >-- Please Select --</OPTION>
+                                            <OPTION VALUE="A" > Andaman & Nicobar Islands</OPTION>
+                                            <OPTION VALUE="B" > Andhra Pradesh</OPTION>
+                                            <OPTION VALUE="C" > Arunachal Pradesh</OPTION>
+                                            <OPTION VALUE="D" > Assam</OPTION>
+                                            <OPTION VALUE="E" > Bihar</OPTION>
+                                            <OPTION VALUE="F" > Chandigarh</OPTION>
+                                            <OPTION VALUE="G" > Chhattisgarh</OPTION>
+                                            <OPTION VALUE="H" > Dadara & Nagar Haveli</OPTION>
+                                            <OPTION VALUE="I" > Daman & Diu</OPTION>
+                                            <OPTION VALUE="J" > Delhi</OPTION>
+                                            <OPTION VALUE="K" > Goa</OPTION>
+                                            <OPTION VALUE="L" > Gujarat</OPTION>
+                                            <OPTION VALUE="M" > Haryana</OPTION>
+                                            <OPTION VALUE="N" > Himachal Pradesh</OPTION>
+                                            <OPTION VALUE="O" > Jammu & Kashmir</OPTION>
+                                            <OPTION VALUE="P" > Jharkhand</OPTION>
+                                            <OPTION VALUE="Q" > Karnataka</OPTION>
+                                            <OPTION VALUE="R" > Kerala</OPTION>
+                                            <OPTION VALUE="S" > Lakhswadeep</OPTION>
+                                            <OPTION VALUE="T" > Madhya Pradesh</OPTION>
+                                            <OPTION VALUE="U" > Maharashtra</OPTION>
+                                            <OPTION VALUE="V" > Manipur</OPTION>
+                                            <OPTION VALUE="W" > Meghalaya</OPTION>
+                                            <OPTION VALUE="X" > Mizoram</OPTION>
+                                            <OPTION VALUE="Y" > Nagaland</OPTION>
+                                            <OPTION VALUE="Z" > Orissa</OPTION>
+                                            <OPTION VALUE="X1" > Pondicherry</OPTION>
+                                            <OPTION VALUE="X2" > Punjab</OPTION>
+                                            <OPTION VALUE="X3" > Rajasthan</OPTION>
+                                            <OPTION VALUE="X4" > Sikkim</OPTION>
+                                            <OPTION VALUE="X5" > Tamil Nadu</OPTION>
+                                            <OPTION VALUE="X6" > Telangana</OPTION>
+                                            <OPTION VALUE="X7" > Tripura</OPTION>
+                                            <OPTION VALUE="X8" > Uttar Pradesh</OPTION>
+                                            <OPTION VALUE="X9" > Uttaranchal</OPTION>
+                                            <OPTION VALUE="X10" > West Bengal</OPTION>
+                                             <OPTION VALUE="X11" > Ladakh</OPTION>
+                                            <OPTION VALUE="X12" > Outside India </OPTION>
+                                          </SELECT>
+                                     </TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>	PIN </B><I>(Indicating PIN is mandatory)</I> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_OFF_ADD_D VALUE=""  SIZE=10 MAXLENGTH=10></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+
+                            <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                        <TD>
+                                            <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                                   <TD WIDTH=50%>     
+                                       <B>Country</B></TD>
+                               
+                                              <TD>
+                                                <TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+                                            <TD><BR>
+                                                <SELECT NAME=PAN_Coun>
+                                                  <OPTION VALUE="" > </OPTION>
+                                                  
+                                                </SELECT>
+                      
+                                            </TD>
+                                        
+                                                </TABLE>
+                                        </TD>
+                               
+                                           </TABLE>
+                                        </TD>
+                               </TR>
+
+                               <TR>
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>	Zip </B> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_OFF_ADD_Z VALUE=""  SIZE=10 MAXLENGTH=4></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+
+                            <TR>
+                                <TD COLSPAN=2>
+                                    <INPUT TYPE=checkbox NAME=TEL_CKP VALUE="YES_TEL" ></TD>
+                                  <TD>
+                                    <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                        <TD WIDTH=50%> *<B> 11. Telephone No.
+                                            </B>(Country code is compulsory)</TD>
+                                        <TD>
+                                            <TABLE  WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                               
+                                           <TD>
+                                             <TABLE BORDER=1>
+                                                 <TR>
+                                                     <TD WIDTH=100% ALIGN=LEFT COLSPAN=3>
+                                                     Country code (ISD code)<BR>
+                                                     <SELECT NAME=PAN_TEL_CC id=Coumtry_c>   </SELECT>
+                                                 </TD>
+                                             
+                                             </TR>
+                                             <TR>
+                                             
+                                             <TD COLSPAN=1 >
+                                             <INPUT TYPE = "RADIO" NAME = "PAN_TEL_NUM_chk" id="PH_num" VALUE="MOB"  > Mobile No.
+                                             </TD>
+                                             
+                                             <TD COLSPAN=1 >
+                                             <INPUT TYPE = "RADIO" NAME = "PAN_TEL_NUM_chk" VALUE="TEL"   > Telephone No.
+                                             </TD>
+                                             </TR>
+                                             <TR>
+                                                  <TD WIDTH=100% ALIGN=LEFT>
+                                                   Area/STD Code<BR>
+                                                   <INPUT TYPE=text NAME=PAN_TEL_STD VALUE="" id="p_TEL_STD" SIZE=10 MAXLENGTH=10>
+                                                  </TD>
+                                                  <TD WIDTH=100% ALIGN=LEFT>
+                                                   Telephone No./Mobile No.<BR>
+                                                   <INPUT TYPE=text NAME=PAN_TEL_NO VALUE="" id="p_TEL_NO" SIZE=13 MAXLENGTH=13>
+                                                   </TD>
+                                               </TR>
+                                               </TABLE>
+                                        </TD>
+                                 </TABLE>
+
+                                  </TD>  
+                                  </TABLE>                
+                            </TR>
+                            <TR>
+                            
+                                <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD><TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                     <TD WIDTH=50%> <B>	E-mail ID </B> </TD>
+                                     <TD><INPUT TYPE=text NAME=PAN_Mail VALUE=""  SIZE=50 MAXLENGTH=50></TD>
+                                    </TABLE>
+                                <TD>
+                            </TR>
+                    <TR>
+                        <TD COLSPAN=2 >&nbsp;</TD> 
+                                <TD>
+                                    <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                           <TD WIDTH=50%> In case of a citizen of India, then</TD>
+                                           <TD>
+                                          <INPUT TYPE=radio NAME=PAN_AP VALUE="ADH" >AADHAAR
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                 <INPUT TYPE=radio NAME=PAN_AP VALUE="EID" >EID
+                                               
+                                           </TD>
+                                    </TABLE>
+                                </TD>
+                    </TR>
+                    <TR>
+                    <TD COLSPAN=2>
+                        <INPUT TYPE=checkbox NAME=GEND_CKP VALUE="YES_G" ></TD>
+                            <TD>
+                                <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                       <TD WIDTH=50%> * <B>12. AADHAAR number :</B></TD>
+                                       
+                                        <TD colspan="2">
+                                            <INPUT TYPE=text type="hidden" id = PAN_ADH_NO NAME=PAN_AADHAR_NO VALUE="" size="12" MAXLENGTH="12" >
+                                            <br/>
+                                            <i><B>In case AADHAAR number is provided, <br/>then proof of AADHAAR along with supporting documents is to be submitted to NSDL</B></i>
+                                         </TD> 
+                                           
+                                       </TD>
+                                    
+                                </TABLE>
+                            </TD>
+                </TR>
+                <TR>
+                    <TD COLSPAN=2 >&nbsp;</TD>  
+                            <TD>
+                                <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                       <TD WIDTH=50%> * Name as per AADHAAR letter <br> or <br>as per the enrollment ID of Aadhaar application form</TD>
+                                       
+                                        <TD colspan="2">
+                                            <INPUT TYPE=text type="hidden" id = PAN_ADH_NO NAME=PAN_AADHAR_NO VALUE="" size="80" MAXLENGTH="80" >
+                                            
+                                         </TD> 
+                                           
+                                       </TD>
+                                    
+                                </TABLE>
+                            </TD>
+
+
+                </TR>
+           
+                <TR >
+       
+
+                        <TR>
+                            <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                            <TD  WIDTH=98%>
+                                <ol>
+                                    <li><em>In case AADHAAR number is provided, then proof of AADHAAR along with supporting documents is to be submitted to NSDL e-Gov.</em></li>
+                                    <li><em>In case applicant is <strong>&lsquo;MINOR&rsquo;</strong>, AADHAAR of minor should be mentioned in the application form.</em></li>
+                                    <li><em>AADHAAR no. would be authenticated using applicant&rsquo;s Full name, Date of Birth and Gender as mentioned in this application form.</em></li>
+                                </ol>
+                            
+                            </TD>
+                            </TR>
+
+                            <TR>
+                    <TD COLSPAN=2>
+                        <INPUT TYPE=checkbox NAME=GEND_CKP VALUE="YES_G" ></TD>
+                            <TD>
+                                <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                       <TD WIDTH=50%> * <B>12. AADHAAR number :</B></TD>
+                                       
+                                        <TD colspan="2">
+                                            <INPUT TYPE=text type="hidden" id = PAN_ADH_NO NAME=PAN_AADHAR_NO VALUE="" size="12" MAXLENGTH="12" >
+                                            <br/>
+                                            <i><B>In case AADHAAR number is provided, <br/>then proof of AADHAAR along with supporting documents is to be submitted to NSDL</B></i>
+                                         </TD> 
+                                           
+                                       </TD>
+                                    
+                                </TABLE>
+                            </TD>
+                            <TR>
+
+                        <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                        <TD  WIDTH=98%>
+                            <ol>
+                                <li><em>In case AADHAAR number is provided, then proof of AADHAAR along with supporting documents is to be submitted to NSDL e-Gov.</em></li>
+                                <li><em>In case applicant is <strong>&lsquo;MINOR&rsquo;</strong>, AADHAAR of minor should be mentioned in the application form.</em></li>
+                                <li><em>AADHAAR no. would be authenticated using applicant&rsquo;s Full name, Date of Birth and Gender as mentioned in this application form.</em></li>
+                            </ol>
+                          
+                        </TD>
+                        </TR>
+                            <TR>
+                    <TD COLSPAN=2>
+                        <INPUT TYPE=checkbox NAME=GEND_CKP VALUE="YES_G" ></TD>
+                            <TD>
+                                <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                       <TD WIDTH=50%> * <B>	13. GSTN</B></TD>
+                                       
+                                        <TD colspan="2">
+                                            <INPUT TYPE=text type="hidden" id = PAN_ADH_NO NAME=PAN_AADHAR_NO VALUE="" size="16" MAXLENGTH="16" >
+                                            
+                                         </TD> 
+                                           
+                                       </TD>
+                                    
+                                </TABLE>
+                            </TD>
+                            </TR>
+
+                            <TR>
+
+                                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                                        <TD>
+                                            <B> 14. Mention other Permanent Account Numbers (PANs) if any,inadvertently allotted to you. <U>Submit
+                                                proof of surrendered PAN(s) along with the application</U>.</B> 
+                                        </TD>
+                             </TR>
+                             <TR>
+                                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                                <TD>
+                                    <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                       <TD><B>PAN1</B> <INPUT TYPE=text NAME=PAN_NO_1 VALUE=""  SIZE=20 MAXLENGTH=20></TD>
+                                        <TD><B>PAN2</B> <INPUT TYPE=text NAME=PAN_NO_2 VALUE=""  SIZE=20 MAXLENGTH=20></TD>
+                                       </TABLE>
+                                </TD>
+                             </TR>
+                             <TR>
+                                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                                <TD>
+                                    <TABLE BORDER=1 WIDTH=100% CELLPADDING=1 CELLSPACING=1>
+                                       <TD><B>PAN3</B> <INPUT TYPE=text NAME=PAN_NO_3 VALUE=""  SIZE=20 MAXLENGTH=20></TD>
+                                        <TD><B>PAN4</B> <INPUT TYPE=text NAME=PAN_NO_4 VALUE=""  SIZE=20 MAXLENGTH=20></TD>
+                                       </TABLE>
+                                </TD>
+                             </TR>
+
+                             <TR>
+                                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                                <TD>
+                                    <B>	15. Verification</B>
+                                </TD>
+                                
+                             </TR>
+                             <TR>
+                                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                                <TD COLSPAN=2 VALIGN=TOP>I/We 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                  <INPUT TYPE=text NAME=PAN_VERIFY_NAME VALUE=""  SIZE=75 MAXLENGTH=75  /> 
+                                  ,the applicant,in the capacity of
+                                  &nbsp;&nbsp;&nbsp;
+                                  <SELECT NAME=PAN_VERIFY_CAPACITY>
+                                           <OPTION VALUE="" >-- Please Select --
+                                           <OPTION VALUE="01" > Himself/herself
+                                           <OPTION VALUE="07" > Representative Assessee
+                                      </SELECT>
+                                  do hereby declare that what is stated above is true to the best of my information and belief. <BR>
+                                  I have enclosed <INPUT TYPE=text NAME=PAN_CPY VALUE="" SIZE=2 MAXLENGTH=2>
+                                  (number of documents) in support of proposed changes/corrections.
+                              
+                                 </TD>
+
+                             </TR>
+                             
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD  WIDTH=98%>Place
+                   <INPUT TYPE=text NAME=PAN_NUMBER VALUE="" SIZE=40 MAXLENGTH=40>
+                </TD>
+           </TR>
+          
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD >
+                  <TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>
+                  <TR>
+                    <TD VALIGN=BOTTOM>Verified today, the</TD>
+                    <TD WIDTH=5><BR></TD>
+                    <TD VALIGN=BOTTOM><FONT SIZE=-1>DD<BR>
+                      29 -
+                    </TD>
+                    <TD VALIGN=BOTTOM><FONT SIZE=-1>MM<BR>
+                      11 -
+                    </TD>
+                    <TD VALIGN=BOTTOM><FONT SIZE=-1>YYYY<BR>
+                      2020
+                    </TD>
+                   </TR>
+                  </TABLE>
+                  </TD>
+                </TR>
+               
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD  VALIGN=TOP>I/We have enclosed
+                     &nbsp;&nbsp;&nbsp;&nbsp;
+                     <SELECT NAME=PAN_PRF_NAME id="" >
+                     </SELECT>
+                     as proof of identity, 
+                     <SELECT NAME=PAN_PRF_ADD id="s" >
+                     </SELECT>
+                     as proof of address, 
+                  <SELECT id=""  NAME="PAN_DOB">
+                  <OPTION VALUE="">--Please Select--</OPTION>
+                  </SELECT>
+                      <span id =''>as proof of date of birth and</span>    
+              
+                     <SELECT NAME=PAN_PRF>
+                         <OPTION VALUE="">--Please Select--
+                         
+                     </SELECT>  
+                     as proof of PAN allotted.
+              
+                     
+                 </TD>
+            </TR>
+        
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD  WIDTH=98%><B>	Whether you wish to have?  </B>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <INPUT TYPE=radio NAME=PAN_CRD id="PAN_P" VALUE="YES_P"  checked _ > Physical PAN Card & e-PAN Card
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                 <INPUT TYPE=radio NAME=PAN_CRD VALUE="YES_E" id="PAN_E" >Only e-PAN Card
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <B><I><U>Fees Applicable</U></I></B>   
+                </TD>
+                </TR>
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD><B>	Other Details</B></TD>
+            </TR>
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD><B>	1. Depository Account Details</B></TD>
+            </TR>
+            <TR>
+                <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+                <TD  WIDTH=98%><b>DP ID:</b>
+                   <INPUT TYPE=text NAME=PAN_DP VALUE="" SIZE=20 MAXLENGTH=20>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Client ID:</b>
+                   <INPUT TYPE=text NAME=PAN_CI VALUE="" SIZE=20 MAXLENGTH=20>
+                </TD>
+           </TR>
+
+           <TR>
+            <TD  COLSPAN=2 WIDTH=2%>&nbsp;</TD>
+            <TD><B>2. Payment Details</B></TD>
+        </TR>
+        <TR>
+            <TR>
+                <TD COLSPAN=2>
+                  <INPUT TYPE=radio NAME=PAN_PAY_Online VALUE="OL"  >
+                </TD>
+                <TD >
+                  <B>Online Payment <span style="display:none">
+                </TD>
+              </TR>
+              
+              
+        </TR>
+                        
+ </TR>
+</TABLE >
+
+<table BORDER=1 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<table >
+<TR>
+   <BR>
+    For Paperless PAN Application: <input type="radio" id="show" name="app_name" value="Y"   checked >Yes <input type="radio" id="hide"
+    name="app_name" value="N" >No <br>
+    <input type="radio" name="sn_ty" value="DSC" id="DSC"  checked> DSC
+    <select name="USER_TYPE" id="DSC_1" >
+        <option value="select"  >--Select--</option>
+        <option value="MINOR" >Minor</option>
+        <option value="RA"  >Lunatic/Idiot</option>
+        <option value="AP"  >Self</option>
+       </select>&nbsp; <U>Guidelines for DSC User</U>
+
+</TR>
+<TR>
+    <TD>
+        Upload Photo
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input id="Photo_F_N" type="file" name="Photo_FILE_NAME" size="15" />
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	
+Upload Signature
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="SIG_F_N" type="file" name="SIG_FILE_NAME" size="15" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR><BR>
+Upload Document
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="SIG_F_N" type="file" name="SIG_FILE_NAME" size="15" />
+
+    </TD>
+    
+</TR>
+</table>
+<table>
+
+    <TR>
+        <TD WIDTH= 60%>
+            <BR>
+            
+            ALREADY UPLOADED PHOTO:
+        </TD>
+        <TD VALIGN=BOTTOM>
+            <input type="text" size="30" id="PH_U" name="Pic_U" VALUE="" >
+        </TD>
+    </TR>
+    <TR>
+        <TD WIDTH= 60%>
+            <BR>
+            
+        ALREADY UPLOADED SIGNATURE:
+        </TD>
+        <TD VALIGN=BOTTOM>
+            <input type="text" size="30" id="SIG_U" name="SIG_U" VALUE="" >
+        </TD>
+    </TR>
+    <TR>
+        <TD  WIDTH= 60%>
+            <BR>
+            ALREADY UPLOADED DOCUMENTS:
+        </TD>
+
+        <TD VALIGN=BOTTOM>
+            <textarea rows="7" cols="40" id="DOC_FILE_NAME_STATE" name="DOC_FILE_NAME_STATE" readOnly='readOnly'></textarea>
+        </TD>
+    </TR>
+
+</table>
+<HR NOSHADE>
+</table >
+
+
+
+</FORM>
+</body>
+</html>
